@@ -14,7 +14,7 @@ if (isNaN(process.argv[2])) {
 }
 
 
-const country = readlineSync.question(`if ${counter} year(s) the majority of your country type enter.`)
+const country = readlineSync.question(`if ${counter} year(s) is the majority of your country type enter.`)
 const userName = readlineSync.question('May I have your name? ')
   const userFirstName = readlineSync.question('May I have your firstname? ')
   const ageStr = readlineSync.question('May i have your age? ')
