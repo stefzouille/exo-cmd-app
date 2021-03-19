@@ -23,7 +23,7 @@ const readlineSync = require('readline-sync')
 //   } else {
 //     console.log(chalk.yellow('please type a number now please !!'))
 //   }
-
+// boucle while a faire
 let nbSec = 10
 if (nbp < 10)
 return 

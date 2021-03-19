@@ -13,7 +13,10 @@ const userName = readlineSync.question('May I have your name? ')
   const ageStr = readlineSync.question('May i have your age? ')
 
 
-
+if (isNaN(ageStr)) {
+  console.log(`Error: ${ageStr} is not a number.`)
+  process.exit(1)
+}
   
   const age = Number(ageStr)
   if (age >= 18) {
