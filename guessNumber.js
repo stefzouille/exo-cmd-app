@@ -11,18 +11,40 @@
 const chalk = require('chalk')
 const readlineSync = require('readline-sync')
 
-const ageStr = readlineSync.question('what the secret number? ')
+// const ageStr = readlineSync.question('what the secret number? ')
 
- const age = Number(ageStr)
-  if (age === 10) {
-    console.log(chalk.green(`Bravo !!`))
-    } else if (age > 10) {
-    console.log(chalk.red(`Nombre trop grand !`))
-  } else if (age < 10) { 
-  console.log(chalk.red(` Nombre trop petit`))
-  } else {
-    console.log(chalk.yellow('please type a number now please bro !!'))
-  }
+//  const age = Number(ageStr)
+//   if (age === 10) {
+//     console.log(chalk.green(`Bravo !!`))
+//     } else if (age > 10) {
+//     console.log(chalk.red(`Nombre trop grand !`))
+//   } else if (age < 10) { 
+//   console.log(chalk.red(` Nombre trop petit`))
+//   } else {
+//     console.log(chalk.yellow('please type a number now please !!'))
+//   }
+
+let nbSec = 10
+if (nbp < 10)
+return 
+nbg > 10
+
+
+switch (nbsec) {
+  case 10: 
+  console.log('bravo')
+  break
+case nbp:
+  console.log('nombre trop petit')
+case nbg:
+  console.log('Nombre trop grand')
+}
+
+
+
+
+
+
 
 
 

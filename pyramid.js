@@ -12,12 +12,15 @@ const showStars = (nbStars) => {
   }
 }
 
-
 // Verifier qu'il n'y a qu'un seul argument passé à notre programme
 if (process.argv.length !== 4) {
-  console.log('NO NO NO------please type a number first and one string in second argument !!!!-------°_°')
+  console.log('please type a number now with 2 arguments !!')
   process.exit(1)
-} 
+}
+else if (process.argv.length !== 4) {
+  console.log('please type 2 arguments max !!')
+  process.exit(1)
+}
 
 // Verifier que l'argument passé à notre programme peut être converti en nombre
 if (isNaN(process.argv[2])) {
