@@ -1,3 +1,9 @@
+// Ecrivez un qcm de 5 questions. Le joueur devra répondre aux questions en entrant le nombre
+//  correspondant à la bonne réponse. A la fin du qcm vous lui donnerez sa note qui correspondra
+//   au nombre de bonnes réponses sur les 5 questions. Je vous propose les 5 questions et les choix possibles,
+//    mais vous pouvez créer les votre si vous voulez:
+
+
 const chalk = require('chalk')
 const readlineSync = require('readline-sync')
 //  const counter = Number(process.argv[2])

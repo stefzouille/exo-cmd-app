@@ -1,50 +1,37 @@
-// Ecrivez un petit jeu qui demande à un utilisateur de trouver un nombre qui aura été passé en ligne de commande par le maitre du jeu. 
-// Le programme s'exécutera tant que l'utilisateur n'aura pas trouvé le bon nombre. Après chaque tentative de l'utilisateur 
-// pour trouver le nombre secret, celui entré en argument de la ligne de commande du programme à son lancement,
-//  les messages suivant lui apparaîtront:
-
-// si le nombre entré par l'utilisateur est plus petit que le nombre secret: 'Nombre trop petit' en rouge
-// si le nombre entré par l'utilisateur est plus grand que le nombre secret: 'Nombre trop grand' en rouge
-// si le nombre entré par l'utilisateur est égal au nombre secret: 'Bravo!' en vert
-
-
+//passer un nb en ligne de commande et le declarer en au lancement du programme
+//demander quelle est le nombre 
+//tant que ce n est pas la bonne reponse je repose la question 
+//si bonne rep affiche ok
 const chalk = require('chalk')
 const readlineSync = require('readline-sync')
 
-// const ageStr = readlineSync.question('what the secret number? ')
 
-//  const age = Number(ageStr)
-//   if (age === 10) {
-//     console.log(chalk.green(`Bravo !!`))
-//     } else if (age > 10) {
-//     console.log(chalk.red(`Nombre trop grand !`))
-//   } else if (age < 10) { 
-//   console.log(chalk.red(` Nombre trop petit`))
-//   } else {
-//     console.log(chalk.yellow('please type a number now please !!'))
-//   }
-// boucle while a faire
-let nbSec = 10
-if (nbp < 10)
-return 
-nbg > 10
+let reponseUtilisateur = ''
+const nbsecret = Number(process.argv[2])
 
-
-switch (nbsec) {
-  case 10: 
-  console.log('bravo')
-  break
-case nbp:
-  console.log('nombre trop petit')
-case nbg:
-  console.log('Nombre trop grand')
+if (process.argv.length !== 3) {        //si process.argv 
+  console.log(`please retype your first argument fatal error !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`)
+  process.exit(1) // exit the program with code status 1
+}
+if (isNaN(nbsecret)) {
+  console.log(`Error: ${nbsecret} is not a number.`)
+  process.exit(1)
 }
 
+while (Number(reponseUtilisateur) !== nbsecret) {
+  reponseUtilisateur = readlineSync.question('what the secret number?')
+  
+  if (isNaN(Number(reponseUtilisateur))) {
+    console.log(`Error: ${reponseUtilisateur} is not a number.`)
+    process.exit(1)
+  }
 
-
-
-
-
-
-
-
+  
+  if (Number(reponseUtilisateur) === nbsecret) {
+    console.log(chalk.green('bravo'))
+  }  else if (Number(reponseUtilisateur) > nbsecret) {
+    console.log(chalk.red('Nombre trop grand'))
+  } else {
+    console.log(chalk.red('Nombre trop petit'))
+  }
+}
