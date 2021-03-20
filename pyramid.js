@@ -9,15 +9,17 @@
 const showStars = (nbStars) => {
   for (let i = 1; i <= nbStars; i += 1) {
     console.log(`${name}`.repeat(i))
-  }
-}
+  } 
+} 
+
+
 
 // Verifier qu'il n'y a qu'un seul argument passé à notre programme
-if (process.argv.length !== 4) {
+if (process.argv.length !== 5) {
   console.log('please type a number now with 2 arguments !!')
   process.exit(1)
 }
-else if (process.argv.length !== 4) {
+else if (process.argv.length !== 5) {
   console.log('please type 2 arguments max !!')
   process.exit(1)
 }
@@ -31,4 +33,5 @@ let name = process.argv[3]
  
 // Nous somme OK, il n'y a qu'un seul argument et c'est un nombre.
 const nbStars = Number(process.argv[2])
-showStars(nbStars)
+showStars(nbStars)                          //prendre le tableau et quand -r on inverse le tab
+
