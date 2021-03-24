@@ -2,6 +2,7 @@
 
 // le nombre d'éléments qui sera la base de la pyramide
 // une string (un caractère) qui sera le motif à afficher contrairement à l'exemple du cours qui affiche par défaut le caractère *.
+²
 
 // Notre fonction ShowStars
 const showStars = (nbStars) => {
