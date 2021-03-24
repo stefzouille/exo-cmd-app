@@ -11,15 +11,12 @@ const showStars = (nbStars) => {
     console.log(`${name}`.repeat(i))
   } 
 } 
-
-
-
 // Verifier qu'il n'y a qu'un seul argument passé à notre programme
-if (process.argv.length !== 5) {
+if (process.argv.length !== 4) {
   console.log('please type a number now with 2 arguments !!')
   process.exit(1)
 }
-else if (process.argv.length !== 5) {
+else if (process.argv.length !== 4) {
   console.log('please type 2 arguments max !!')
   process.exit(1)
 }

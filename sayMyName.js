@@ -1,5 +1,6 @@
 //Ecrivez un script sayMyName.js qui prend en argument de la ligne de commande une string et affiche un message comme ci-dessous:
-
+// % node sayMyName.js Sofiane
+// My name is Sofiane.
 
 let name = process.argv[2]     // process.argv est un tableau de string assigné a la variable name en dessous erreur return a if car [i] de 2 = .js
 
